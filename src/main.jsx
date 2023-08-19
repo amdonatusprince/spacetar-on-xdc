@@ -24,14 +24,14 @@ import {
 
 import { configureChains, createConfig, WagmiConfig } from 'wagmi';
 import {
-  baseGoerli, base
+  baseGoerli, base, xdc, xdcTestnet
 } from 'wagmi/chains';
 
 import { publicProvider } from 'wagmi/providers/public';
 
-const projectId = import.meta.env.VITE_BASE_PROJECT_ID;
+const projectId = import.meta.env.VITE_XDC_PROJECT_ID;
 const { chains, publicClient } = configureChains(
-  [base, baseGoerli],
+  [base, baseGoerli, xdc, xdcTestnet],
   [
     publicProvider()
   ]
