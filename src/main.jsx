@@ -13,7 +13,7 @@ import {
 
 import { connectorsForWallets } from '@rainbow-me/rainbowkit';
 import {
-  coreWallet,
+  braveWallet,
   metaMaskWallet,
   trustWallet,
   injectedWallet,
@@ -22,6 +22,8 @@ import {
   coinbaseWallet,
 } from '@rainbow-me/rainbowkit/wallets';
 
+import { jsonRpcProvider } from '@wagmi/core/providers/jsonRpc'
+import {xdc_Testnet} from '../src/Chains'
 import { configureChains, createConfig, WagmiConfig } from 'wagmi';
 import {
   baseGoerli, base, xdc, xdcTestnet
@@ -31,28 +33,31 @@ import { publicProvider } from 'wagmi/providers/public';
 
 const projectId = import.meta.env.VITE_XDC_PROJECT_ID;
 const { chains, publicClient } = configureChains(
-  [base, baseGoerli, xdc, xdcTestnet],
+  [xdc, xdc_Testnet],
   [
-    publicProvider()
+    jsonRpcProvider({
+      rpc: (chain) => ({ http: chain.rpcUrls.default.http[0] 
+      }),
+    }),
   ]
 );
 
 const connectors = connectorsForWallets([
-  {
-    groupName: 'Recommended',
-    wallets: [
-      coinbaseWallet({ chains, 
-        appName: 'Spacetar | A Community Empowering Mental Well-Being' }),
-    ]
-  },
+  // {
+  //   groupName: 'Recommended',
+  //   wallets: [
+  //     coinbaseWallet({ chains, 
+  //       appName: 'Spacetar | A Community Empowering Mental Well-Being' }),
+  //   ]
+  // },
   {
     groupName: 'Others',
     wallets: [
-      metaMaskWallet({ projectId, chains }),
-      trustWallet({ projectId, chains }),
-      injectedWallet({ chains }),
-      rainbowWallet({ projectId, chains }),
-      walletConnectWallet({ projectId, chains }),
+      // metaMaskWallet({ projectId, chains }),
+      // trustWallet({ projectId, chains }),
+      injectedWallet({ projectId, chains }),
+      // rainbowWallet({ projectId, chains }),
+      // walletConnectWallet({ projectId, chains }),
     ],
   },
 ]);
