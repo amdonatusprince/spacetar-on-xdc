@@ -105,7 +105,7 @@ https://apothem.xinfinscan.com/address/xdc4838854e5150e4345fb4ae837e9fcca40d51f3
 ### Intuitive User Interface: 
 The design of the user interface was paramount in fostering a user-friendly and inviting experience. Employing BlocksPay, Wagmi, React.js, and other cutting-edge technologies, we fashioned an interface that facilitates seamless interactions with the underlying blockchain infrastructure.
 
-We established a bridge between the frontend and the Base blockchain. This enabled users to transparently engage with smart contracts and participate in the Spacetar community.
+We established a bridge between the frontend and the XDC blockchain. This enabled users to transparently engage with smart contracts and participate in the Spacetar community.
 
 ## Challenges we ran into
 Our journey in bringing Spacetar to life was not devoid of challenges. Navigating the complexities of blockchain technology, designing a seamless user interface, and integrating various components required strategic problem-solving and persistent collaboration.
