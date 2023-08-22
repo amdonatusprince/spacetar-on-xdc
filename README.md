@@ -27,7 +27,7 @@ To explore and interact with the Spacetar decentralized application (dApp) on yo
 2. Install Dependencies
 * Navigate to the cloned repository's directory:
 ```
-cd spacetar-on-base
+cd spacetar-on-xdc
 ```
 * Install the required Node.js packages by running:
 ```
@@ -37,8 +37,8 @@ npm install
 * Create a file named .env in the root directory of the project.
 * Open the .env file and add the following variables:
 ```
-VITE_BASE_PROJECT_ID=YOUR_PROJECT_ID
-VITE_BASE_CONTRACT=YOUR_CONTRACT_ADDRESS
+VITE_XDC_PROJECT_ID=YOUR_PROJECT_ID
+VITE_XDC_CONTRACT=YOUR_CONTRACT_ADDRESS
 ```
 Replace YOUR_PROJECT_ID with your project ID and YOUR_CONTRACT_ADDRESS with the deployed contract address.
 
@@ -99,11 +99,11 @@ Through these dynamic features, Spacetar seeks to break down barriers, challenge
 The development journey of Spacetar can be distilled into several pivotal stages:
 
 ### Smart Contract Creation: 
-The foundation of Spacetar's decentralized ecosystem lies in its smart contracts. We meticulously crafted and deployed smart contracts on the Avalanche blockchain, ensuring the security and integrity of the platform. The verified contract address can be found here 
-https://goerli.basescan.org/address/0x4838854e5150e4345fb4ae837e9fcca40d51f3fe#code
+The foundation of Spacetar's decentralized ecosystem lies in its smart contracts. We meticulously crafted and deployed smart contracts on the XDC Network, ensuring the security and integrity of the platform. The verified contract address can be found here 
+https://apothem.xinfinscan.com/address/xdc4838854e5150e4345fb4ae837e9fcca40d51f3fe#readContract
 
 ### Intuitive User Interface: 
-The design of the user interface was paramount in fostering a user-friendly and inviting experience. Employing Wagmi, React.js, and other cutting-edge technologies, we fashioned an interface that facilitates seamless interactions with the underlying blockchain infrastructure.
+The design of the user interface was paramount in fostering a user-friendly and inviting experience. Employing BlocksPay, Wagmi, React.js, and other cutting-edge technologies, we fashioned an interface that facilitates seamless interactions with the underlying blockchain infrastructure.
 
 We established a bridge between the frontend and the Base blockchain. This enabled users to transparently engage with smart contracts and participate in the Spacetar community.
 
@@ -151,6 +151,6 @@ Join us in this transformative journey as we empower mental well-being, one conn
 
 ## Useful Resources
 - Link to Deployed Website: https://spacetar-on-base.vercel.app
-- Contract Address (0x4838854e5150e4345fb4ae837e9fcca40d51f3fe)
-- Link to Verified Contract Address on Base Goerli Testnet: https://goerli.basescan.org/address/0x4838854e5150e4345fb4ae837e9fcca40d51f3fe#code
+- Contract Address: xdc4838854e5150e4345fb4ae837e9fcca40d51f3fe
+- Link to Verified Contract Address on XDC Apothem Testnet: https://apothem.xinfinscan.com/address/xdc4838854e5150e4345fb4ae837e9fcca40d51f3fe#readContract
 - Link to Spacetar DEMO Video: https://youtu.be/XgdbL20QwNg
