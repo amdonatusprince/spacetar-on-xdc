@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, {useState } from 'react';
 import design from './why.module.css';
 import Button from '../Button/Button';
 import Green from '../../assets/green.png';
@@ -6,12 +6,15 @@ import Blue from '../../assets/blue.png';
 import Orange from '../../assets/orange.png';
 import Purple from '../../assets/purple.png';
 import { Link } from 'react-router-dom';
-import { useAccount } from 'wagmi';
-import { LoginButton } from '../../connect-wallet/connectButton';
+import ConnectButton from '../../connect-wallet/onConnect'
 
 const Why = () => {
 
-  const { address, isConnected } = useAccount();
+  const [provider, setProvider] = useState(null);
+  const [address, setAddress] = useState(null);
+
+  const isConnected = !!address;
+
 
   return (
     <div className={design.Why}>
@@ -47,7 +50,7 @@ const Why = () => {
                 <Button content='Launch dApp' />
               </Link>
             ) : (
-              <LoginButton label={"Get Started"}/>
+              <ConnectButton setProvider={setProvider} setAddress={setAddress} />
             )}
       </div>
     </div>

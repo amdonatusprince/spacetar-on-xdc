@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
 import design from './footer.module.css'
 import Button from '../Button/Button'
 import Logo from '../../assets/LOGO.png'
@@ -7,11 +7,23 @@ import { FaTwitter } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { Link } from 'react-router-dom';
-import { LoginButton } from '../../connect-wallet/connectButton'
-import { useAccount } from 'wagmi';
+import ConnectButton from '../../connect-wallet/onConnect'
 
 const Footer = () => {
-    const { address, isConnected } = useAccount();
+  const [provider, setProvider] = useState(null);
+  const [address, setAddress] = useState(null);
+
+  useEffect(() => {
+    if (provider) {
+      const signer = provider.getSigner();
+      signer.getAddress().then((connectedAddress) => {
+        setAddress(connectedAddress);
+      });
+    }
+  }, [provider]);
+
+  const isConnected = !!address;
+
   return (
     <>
     <div className={design.footercontainer}>
@@ -28,7 +40,7 @@ const Footer = () => {
                 <Button content='Launch dApp' />
               </Link>
             ) : (
-              <LoginButton />
+              <ConnectButton setProvider={setProvider} setAddress={setAddress} />
             )}
             </div>
         </div>

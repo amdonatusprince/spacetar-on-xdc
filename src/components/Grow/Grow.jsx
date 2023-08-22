@@ -1,14 +1,27 @@
-import React, { useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import RIGHT from '../../assets/grow_img.png';
 import STAR from '../../assets/starz.png';
 import Button from '../Button/Button';
 import design from './grow.module.css';
 import { Link } from 'react-router-dom';
-import { useAccount } from 'wagmi';
-import { LoginButton } from '../../connect-wallet/connectButton';
+import ConnectButton from '../../connect-wallet/onConnect'
+
 
 const Grow = () => {
-  const { address, isConnected } = useAccount();
+
+  const [provider, setProvider] = useState(null);
+  const [address, setAddress] = useState(null);
+
+  useEffect(() => {
+    if (provider) {
+      const signer = provider.getSigner();
+      signer.getAddress().then((connectedAddress) => {
+        setAddress(connectedAddress);
+      });
+    }
+  }, [provider]);
+
+  const isConnected = !!address;
 
   return (
     <div className={`${design.Grow} `}>
@@ -32,7 +45,7 @@ const Grow = () => {
                 <Button content='Launch dApp' />
               </Link>
             ) : (
-              <LoginButton />
+              <ConnectButton setProvider={setProvider} setAddress={setAddress} />
             )}
           </div>
         </div>

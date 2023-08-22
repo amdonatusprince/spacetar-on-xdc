@@ -1,13 +1,26 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
 import design from './getStarted.module.css'
 import img from '../../assets/getstartedimg.png'
 import Button from '../Button/Button'
 import { Link } from 'react-router-dom'
-import { LoginButton } from '../../connect-wallet/connectButton'
-import { useAccount } from 'wagmi';
+import ConnectButton from '../../connect-wallet/onConnect'
+import { LoginButton } from '../../connect-wallet/connectButton';
 
 const GetStarted = () => {
-    const { address, isConnected } = useAccount();
+    const [provider, setProvider] = useState(null);
+    const [address, setAddress] = useState(null);
+  
+    useEffect(() => {
+      if (provider) {
+        const signer = provider.getSigner();
+        signer.getAddress().then((connectedAddress) => {
+          setAddress(connectedAddress);
+        });
+      }
+    }, [provider]);
+  
+    const isConnected = !!address;
+    
   return (
     <>
     <div className={design.getstarted}>
@@ -69,7 +82,7 @@ const GetStarted = () => {
                 <Button content='Launch dApp' />
               </Link>
             ) : (
-              <LoginButton />
+                <ConnectButton setProvider={setProvider} setAddress={setAddress} />
             )}
         </div>
         <div className={design.getstartedimg}>
