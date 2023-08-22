@@ -1,6 +1,6 @@
 # Spacetar - A Decentralized Community Empowering Mental Well-Being
 
-![Spacetar Homepage](https://github.com/amdonatusprince/spacetar-on-avalanche/blob/main/src/assets/dashboard-1.png)
+![Spacetar Homepage](https://github.com/amdonatusprince/spacetar-on-xdc/blob/main/src/assets/connectWallet.png)
 
 
 ## Inspiration
@@ -59,19 +59,19 @@ Spacetar is a groundbreaking decentralized application (dApp) that redefines the
 
 
 ### Holistic Dashboard Experience
-![Spacetar Dashboard](https://github.com/amdonatusprince/spacetar-on-avalanche/blob/main/src/assets/homepage.png)
+![Spacetar Dashboard](https://github.com/amdonatusprince/spacetar-on-xdc/blob/main/src/assets/dashboardXDC.png)
 
 Step into a seamlessly integrated dashboard that serves as your portal to the Spacetar universe. This comprehensive hub provides a bird's-eye view of all essential elements. From here, you can effortlessly access every facet of Spacetar's transformative capabilities, making your journey smooth and intuitive.
 
 ### Help Rooms: Connect and Engage
-![Spacetar Chat](https://github.com/amdonatusprince/spacetar-on-avalanche/blob/main/src/assets/chat-room.png)
+![Spacetar Chat](https://github.com/amdonatusprince/spacetar-on-xdc/blob/main/src/assets/chatXDC.png)
 
 Forge connections and engage in vibrant conversations within Spacetar's unique Help Rooms. These dynamic group chat spaces offer an arena where individuals can join ongoing discussions or initiate their dialogues. 
 Experience the power of shared experiences as you interact, connect, and find solace in a community that understands and supports you.
 
 ### Reward Points: Claim Your Empowerment
 
-![Spacetar Claims](https://github.com/amdonatusprince/spacetar-on-avalanche/blob/main/src/assets/claim-page.png)
+![Spacetar Claims](https://github.com/amdonatusprince/spacetar-on-xdc/blob/main/src/assets/claimXDC.png)
 
 
 Your active participation in the Spacetar community doesn't go unnoticed. Navigate to the Reward Points section to witness the tangible impact of your engagement. Here, you can view the reward tokens you've earned, a testament to your contributions. 
@@ -81,12 +81,12 @@ The Spacetar ecosystem empowers users to accumulate and stake their earned rewar
 Harness these tokens to strengthen your connection with the Spacetar ecosystem and amplify your well-being journey.
 
 ### Empower through Contribution: Donate to Fuel Progress
-![Spacetar Donate](https://github.com/amdonatusprince/spacetar-on-avalanche/blob/main/src/assets/donate.png)
+![Spacetar Donate](https://github.com/amdonatusprince/spacetar-on-xdc/blob/main/src/assets/donateXDC.png)
 
 Spacetar isn't just a dApp; it's a shared vision of empowerment and support. Immerse yourself in the Donate section, where you have the opportunity to contribute to the growth and sustenance of the Spacetar community. By supporting this collective endeavor, you actively shape the future of mental health empowerment.
 
 ### Seamless Departures: Exit Rooms and Disconnect
-![Spacetar Exit](https://github.com/amdonatusprince/spacetar-on-avalanche/blob/main/src/assets/exit-room.png)
+![Spacetar Exit](https://github.com/amdonatusprince/spacetar-on-xdc/blob/main/src/assets/exitXDC.png)
 
 Exercise autonomy over your Spacetar experience with the Exit Room feature. When you feel your time in a Help Room has reached its conclusion, gracefully exit the conversation without hesitation. 
 
