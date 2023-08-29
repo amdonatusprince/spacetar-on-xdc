@@ -1,4 +1,4 @@
-# Spacetar - A Decentralized Community Empowering Mental Well-Being
+# Spacetar - A Decentralized Forum Empowering Mental Well-Being
 
 ![Spacetar Homepage](https://github.com/amdonatusprince/spacetar-on-xdc/blob/main/src/assets/connectWallet.png)
 
